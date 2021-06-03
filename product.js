@@ -119,6 +119,10 @@ app.component('productModal', {
                 </div>
 
               </div>
+              <div class="mb-1">
+              <input type="file" class="form-control" @change="upload" id="file"/>   
+              </div>
+              
               <div class="mb-1">多圖新增</div>
               <div v-if="Array.isArray(tempProduct.imagesUrl)">
                 <div class="mb-1" v-for="(image, key) in tempProduct.imagesUrl" :key="key">
@@ -217,6 +221,9 @@ app.component('productModal', {
         createImages() {
             this.tempProduct.imagesUrl = ['']
         },
+        upload(){
+          
+        }
     }
 });
 app.component('deleteModal', {
