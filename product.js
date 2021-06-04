@@ -32,7 +32,8 @@ const app = createApp({
           this.pagination = res.data.pagination;
         }
         else {
-          alert('讀取失敗')
+          alert('讀取失敗');
+          window.location = 'index.html';
         }
       }).catch(error => {
         consolo.log(error)
