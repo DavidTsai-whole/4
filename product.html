@@ -66,9 +66,9 @@
       <pagination class="d-flex justify-content-center mt-5" :page="pagination" @page-change="getData"></pagination>
     </div>
     <!-- Modal -->
-    <product-modal :temp-product="tempProduct" :api="api" @update="updateProduct"></product-modal>
+    <product-modal :temp-product="tempProduct" :api="api" ref="modalA" @update="updateProduct"></product-modal>
     <!--刪除-->
-    <delete-modal  :temp-product="tempProduct" @delete="deleteProduct"></delete-modal>
+    <delete-modal  :temp-product="tempProduct" ref="modalB" @delete="deleteProduct"></delete-modal>
     <!-- Modal -->
   </div>
 
